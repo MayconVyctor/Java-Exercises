@@ -4,7 +4,7 @@ public class CarrinhoDeCompras {
     String nome;
     static String produto;
 
-    public Carrinho(String nome,){
+    //public Carrinho(String nome,){
 
     }
-}
+

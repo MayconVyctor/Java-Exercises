@@ -3,7 +3,7 @@ package org.example;
 
 import java.util.Random;
 
-public class ExercicioTutoriaC3 {
+public class ExercicioTutoriaC {
     public static void main(String[] args) {
         int linhas = 5;
         int colunas = 4;

@@ -1,0 +1,19 @@
+-- comandos mermaid-- 
+
+config:
+  theme: redux
+---
+flowchart TB
+    Inicio(["inicio"]) --> Decision
+    Decision{"Se x < 0 e y >= 0"}
+    Decision --> |Sim| resultadoA["Quadrante 1"] 
+    Decision --> |Não| Decision2["Se x >= 0 e y >= 0"]
+    Decision2 --> |Sim| resultadoB["Quadrante 2"] 
+    Decision2 --> |Não| Decision3[" Se x <= 0 e y < 0"]
+    Decision3 --> |Sim|resultadoC["Quadrante 3"]
+    Decision3 --> |Não| Decision4["Quadrante 4"]
+    resultadoC & Decision4 --> Fim
+    Fim(["Fim"])
+
+    Decision2@{ shape: diam}
+    Decision3@{ shape: diam}

@@ -1,0 +1,25 @@
+comandos fluxoGrama2
+
+config:
+  theme: redux
+---
+flowchart TB
+    Inicio(["inicio"]) --> Passo1["RECEBER T E LEIA T"]
+    Passo1 --> Passo2(["caso = 0"])
+    Passo2 --> Decision{"caso &lt; T?"}
+    Decision -- Sim --> resultadoA["RECEBA UM NUMERO N E LEIA N"]
+    Decision -- Nao --> Fim(["Fim"])
+    resultadoA --> Passo3(["Fatorial = 1"])
+    Passo3 --> Passo4(["i = 1"])
+    Passo4 --> Decision2["i &lt;= N"]
+    Decision2 -- Não --> Passo6["Mostrar último dígito"]
+    Decision2 -- Sim --> resultadoC["(fatorial *i) %10"]
+    resultadoC --> Passo5(["i = i + 1"])
+    Passo5 --> Decision2
+    Passo6 --> Passo7["caso = caso + 1"]
+    Passo7 --> Decision
+
+    Passo1@{ shape: lean-l}
+    resultadoA@{ shape: lean-l}
+    Decision2@{ shape: diam}
+    Passo6@{ shape: lean-l}
